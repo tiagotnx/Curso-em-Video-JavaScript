@@ -1,2 +1,2 @@
-# Curso-em-V-deo---JavaScript
+# Curso em Vídeo - JavaScript
 Conteúdos produzidos durante o curso.
