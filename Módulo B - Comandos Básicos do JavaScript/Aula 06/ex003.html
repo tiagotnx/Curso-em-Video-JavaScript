@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: #6565c5;
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!!</p>
+    <script>
+
+        //O comando Number.parseInt(n) converte o valor digitado no prompt para número inteiro
+        //O comando Number.parseFloat(n) converte o valor digitado no prompt para número real
+        //O comando Number(n) converte o valor digitado no prompt para número
+
+        //Tabém é possivel converter número em string utilizando String(n) e n.toString()
+
+        //(number + number) o + é utilizado para adição
+        //(string + string) o + é utilizado para concatenação
+        //${s} usa template string
+
+        //FORMATAÇÃO DE STRINGS
+        //s.length - conta quantos caracteres a string tem;
+        //s.toUpperCase() - converte tudo em maiúsculo;
+        //s.toLowerCase() - converte tudo para minusculo.
+       
+        var n1 = Number(window.prompt('Digite um número:')); //A variável guardará o número digitado no prompt
+        var n2 = Number(window.prompt('Digite outro número:')); //A variável guardará o número digitado no prompt
+        var s = n1 + n2; //o sinal de + concatenou os valores por entender que são strings. Para que a soma aconteça, o JS precisa entender que são números
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`); //Utilização de template String para facilitar
+
+    </script>
+</body>
+</html>
