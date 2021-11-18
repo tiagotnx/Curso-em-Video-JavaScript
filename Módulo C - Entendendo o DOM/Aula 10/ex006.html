@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> quando for clicado na div a função clicar será disparada -->
+        <div id="area">
+        Interaja...
+
+    </div>
+    <script>
+         var a = window.document.getElementById('area') // faz a captura do elemento com o ID area
+        a.addEventListener('click', clicar) //Fica escutando o elemento que foi capturado na variavel a e quando o click acontecer ele executará a função clicar
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+             a.innerText = 'clicou!' // altera o texto do elemento capturado na var a por 'clicou!'
+             a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'entrou!'
+        }
+
+        function sair() {
+            a.innerText = 'saiu!'
+            a.style.background = 'green'
+        }
+
+    </script>
+</body>
+</html>
+
+<!--
+Eventos DOM
+
+mouseenter - Quando o mouse entrar no objeto
+mousemove - quando o mouse se mover dentro do objeto
+mousedown - quando o mouse clickar e segurar dentro do objeto
+mouseup - quando soltar o botão do mouse dentro do objeto
+click - quando o botão for apertado e solto rapidamente dentro do objeto
+mouseout - quando mover o mouse para fora da div
+
+todos os eventos possíveis: https://developer.mozilla.org/pt-BR/docs/Web/Events
+
+
+Função - é disparada quando um evento acontece
+
+
+-->
