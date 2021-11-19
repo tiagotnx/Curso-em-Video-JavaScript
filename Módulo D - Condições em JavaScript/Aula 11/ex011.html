@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é Brasileiro?</title>
+</head>
+<body>
+    <h1>Você é Brasileiro?</h1>
+    Eu nasci no país: <input type="text" id="pais"> e sou...
+    <input type="button" value="Enviar" id="enviar" onclick="teste()">
+    <div id="res"></div>
+
+<script>
+    function teste () {//funçao executada ao clicar no botão
+        var pais = window.document.querySelector('input#pais') //captura o input com id pais
+        var res = window.document.querySelector('div#res')//captura a div com id res
+        var valorPais = pais.value //captura o valor dentro da variável pais
+
+        if (valorPais == 'Brasil') {//se o valor de valorPais for igual a Brasil o if será executado e será inserido na div a mensagem
+            res.innerHTML = `<p>Eu nasci no ${valorPais} e sou Brasileiro</p>`
+        } else {//se o valor de valorPais for diferente de Brasil o else será executado e será inserido na divi a mensagem
+            res.innerHTML = `<p>Eu nasci no ${valorPais} e sou Estrangeiro</p>`
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
