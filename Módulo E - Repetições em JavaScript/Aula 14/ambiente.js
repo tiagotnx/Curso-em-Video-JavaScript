@@ -1,6 +1,12 @@
-console.log('Vai começar...')
-for (var c = 1;c <= 5; c++)//o for recebe a variável com o valor inicial; o teste lógico e; o incremento 
-{
-    console.log(c)
+function myFunction(a) {
+    const array = [...a];
+    let contador = 0;
+    for (item of array) {
+        if (item < 0) {
+            contador += 1;
+        }
+    }
+    return contador;
 }
-console.log('Fim!')
+
+console.log(myFunction([1,-2,2,-4]))
